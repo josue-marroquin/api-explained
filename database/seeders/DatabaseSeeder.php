@@ -13,6 +13,14 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
+        /**
+         * Utilizaremos los modelos de User y Post
+         * para generar datos falsos de forma aleatoria.
+         * En las 2 sentencias a continuacion se generan 10 Usuarios y 120 posts.
+         */
+
+        \App\Models\User::factory(10)->create();
+        \App\Models\Post::factory(120)->create();
+        
     }
 }
