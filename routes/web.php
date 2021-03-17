@@ -13,6 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+/**
+ * Generamos la ruta hacia el directorio raiz la cual va interactuar
+ * con el controlador PostController en su metodo index()
+ * 
+ * Desde aca haremos la configuraion visual de la informacion que gestionamos
+ * a traves de nuestra API.
+ */
+
+Route::get('/', [App\Http\Controllers\PostController::class, 'index']);
